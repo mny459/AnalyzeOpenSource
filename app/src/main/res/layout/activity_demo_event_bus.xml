@@ -5,18 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".eventbus.DemoEventBusActivity">
 
     <Button
-        android:onClick="rxjava"
-        android:id="@+id/btn_rxjava"
+        android:id="@+id/btn_send_event"
         style="@style/CommonButton"
-        android:text="RxJava" />
-
-    <Button
-        android:onClick="eventBus"
-        android:id="@+id/btn_event_bus"
-        style="@style/CommonButton"
-        android:text="EventBus" />
-
+        android:text="发送事件" />
 </LinearLayout>
