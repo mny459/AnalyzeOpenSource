@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 
+import com.mny.learning.EventBusIndex;
 import com.mny.learning.superopensource.R;
 
 import org.greenrobot.eventbus.EventBus;
@@ -20,6 +21,9 @@ public class DemoEventBusActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_demo_event_bus);
+        EventBus.builder()
+                .addIndex(new EventBusIndex())
+                .installDefaultEventBus();
         findViewById(R.id.btn_send_event).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
